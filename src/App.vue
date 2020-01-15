@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Countries</h1>
-    <country-select></country-select>
+    <country-select :countries='countries'></country-select>
   </div>
 </template>
 

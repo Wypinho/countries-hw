@@ -1,14 +1,17 @@
 <template lang="html">
   <div>
     <select>
-      <option></option>
+      <option v-for="country in countries">{{ country.name }}</option>
+
+      <!-- <list-item v-for="(munro, index) in munros" :munro="munro" :key="index"></list-item> -->
     </select>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'country-select'
+  name: 'country-select',
+  props: ['countries']
 }
 </script>
 
