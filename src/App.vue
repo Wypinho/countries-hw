@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { eventBus } from './main.js';
 import CountrySelect from './components/CountrySelect.vue';
 
 export default {
@@ -20,7 +21,10 @@ export default {
     fetch('https://restcountries.eu/rest/v2/all')
       .then(response => response.json())
       .then(countryArray => this.countries = countryArray)
-    // .then(munros => this.munros = munros)
+
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country;
+    });
   },
   components: {
     "country-select": CountrySelect
