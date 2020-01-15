@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-
-
+    <h1>Countries</h1>
+    <country-select></country-select>
   </div>
 </template>
 
 <script>
-
+import CountrySelect from './components/CountrySelect.vue';
 
 export default {
   name: 'app',
@@ -23,7 +23,7 @@ export default {
     // .then(munros => this.munros = munros)
   },
   components: {
-
+    "country-select": CountrySelect
   }
 }
 </script>
